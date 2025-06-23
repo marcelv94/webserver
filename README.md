@@ -70,11 +70,16 @@ chmod a+w /var/www/html
 
 # Ingress Rules bearbeiten für externen Zugriff:
 
-```
-➔ Oracle Instanz öffnen
-➔ Networking → Subnet öffnen
-➔ Default Security List öffnen
-```
+➔ Oracle Instanz öffnen  
+➔ Networking
+  
+![Networking](img/networking.png)  
+  
+➔ Subnet öffnen  
+➔ Default Security List öffnen  
+  
+![Subnet](img/subnet.png)  
+  
 
 ```
 ➔ Ingress Rules für Port 80 und 443 hinzufügen (am besten für TCP und UDP)
@@ -84,6 +89,9 @@ chmod a+w /var/www/html
    o Source Port Range: All
    o Destination Port Range: 80 (bzw. 443)
 ```
+
+![Ingress Rules](img/ingress_rules.png)  
+  
 # VS Code mit Cloud Instanz verbinden
 
 - wie gewohnt links unten blauen Button zur SSH Verbindung klicken
