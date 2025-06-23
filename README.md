@@ -1,18 +1,18 @@
 # VM Erstellen:
 
-- Basic Information
-     → Name vergeben für die Instanz z.B. webserver
-     → Image: Ubuntu 22.
-     → Shape: AMD VM.Standard.E2.1.Micro
-- Security
+- Basic Information  
+     → Name vergeben für die Instanz z.B. webserver  
+     → Image: Ubuntu 22.04  
+     → Shape: AMD VM.Standard.E2.1.Micro  
+- Security  
      → Unberührt lassen
-- Networking
-     → Create a new virtual cloud network: Namen vergeben für Cloud Network und für Subnet
-     → SSH Key herunterladen oder bestehenden publickey hochladen
-- Boot Volume
-     → Unberührt lassen
-- Review
-     → Zum Abschließen „Create“ Button drücken und warten bis VM installiert ist
+- Networking  
+     → Create a new virtual cloud network: Namen vergeben für Cloud Network und für Subnet  
+     → SSH Key herunterladen oder bestehenden publickey hochladen  
+- Boot Volume  
+     → Unberührt lassen  
+- Review  
+     → Zum Abschließen „Create“ Button drücken und warten bis VM installiert ist  
 
 # SSH Einrichten:
 
@@ -96,8 +96,8 @@ chmod a+w /var/www/html
 # VS Code für wenig Ressourcen einrichten
 
 - Per SSH mit dem webserver verbinden
-- File → Preferences → Settings
-→ In der Suchleiste nach „search.followsymlinks“ eintippen
+- File → Preferences → Settings  
+→ In der Suchleiste nach „search.followsymlinks“ eintippen  
 → Checkbox deaktivieren
 
 
