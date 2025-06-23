@@ -21,17 +21,17 @@ Diese nun auswählen. Unter Details ist nun die Public IP Adresse hinterlegt.
 Unter MobaXterm:
 ```
 New Session → SSH
-o Remote host: <PUBLIC_IP_DES_SERVERS>
-o Specify username: ubuntu
-o Advanced SSH settings:
-   ➔ Private key aktivieren und Datei auswählen
+  o Remote host: <PUBLIC_IP_DES_SERVERS>
+  o Specify username: ubuntu
+  o Advanced SSH settings:
+    ➔ Private key aktivieren und Datei auswählen
 ```
 
 # VM als Webserver einrichten:
 
 Nun sollte man sich mit der VM verbunden haben. Danach folgendes eingeben:
 
-- Eingabe: 
+- Eingabe für ngnix und php: 
 ```
 sudo su
 apt-update
@@ -43,7 +43,7 @@ nano default
 ```
 - Wir sind nun im nano Texteditor und die Datei „default“ wird dargestellt
 - Zeile suchen (nach unten scrollen mit Pfeiltasten): #location ~ \.php$ {
-- Das # wegmachen (mit der entfernen-Taste oder backspace) um die zeile zu aktivieren (diese wird dann weiss dargestellt)
+- Das # wegmachen (mit der Entfernen-Taste oder backspace) um die zeile zu aktivieren (diese wird dann weiß dargestellt)
 - Die folgenden Zeilen müssen „aktiviert“ werden (inkl der Zeile mit der Klammer } ):
 ```
 location ~ \.php$ {
@@ -51,12 +51,15 @@ location ~ \.php$ {
    fastcgi_pass unix:/run/php/php8.1‐fpm.sock;
 }
 ```
-- Die Zeile “fastcgi_pass ...” muss angepasst werden nach dem aktivieren. „7.4“ entfernen!
+- Die Zeile “fastcgi_pass ...” muss angepasst werden nach dem aktivieren. Mit "php -v" kann die php-Version ermittelt werden. "... with Zend OPcache v8.1.2ubuntu.2.21 ..." Sagt aus, dass es sich um die Version 8.1 handelt.
 - Abspeichern mit Taste „Steuerung+X“ dann „Y“ dann „Enter“
-- Eingabe: /etc/init.d/nginx reload
-- sudo ufw allow 80
-- sudo ufw allow 443
-- sudo ufw enable
+- Eingabe für http/https Firewall Genehemigung und Aktivierung:
+```
+/etc/init.d/nginx reload
+sudo ufw allow 80
+sudo ufw allow 443
+sudo ufw enable
+```
 - Ändern der Zugriffsrechte im Webserver-Verzeichnis:
 ```
 chown benutzername /var/www/html
