@@ -1,4 +1,4 @@
-# VM Erstellen:
+# VM Erstellen
 
 - Basic Information  
      → Name vergeben für die Instanz z.B. webserver  
@@ -14,7 +14,7 @@
 - Review  
      → Zum Abschließen „Create“ Button drücken und warten bis VM installiert ist  
 
-# SSH Einrichten:
+# SSH Einrichten
 
 Unter Instanzen sollte nun die Instanz mit dem vergebenen Namen auftauchen.
 Diese nun auswählen. Unter Details ist nun die Public IP Adresse hinterlegt.
@@ -27,7 +27,7 @@ New Session → SSH
     ➔ Private key aktivieren und Datei auswählen
 ```
 
-# VM als Webserver einrichten:
+# VM als Webserver einrichten
 
 Nun sollte man sich mit der VM verbunden haben. Danach folgendes eingeben:
 
@@ -71,7 +71,7 @@ chmod a+w /var/www/html
 - Maschine neustarten mit: reboot
 
 
-# Ingress Rules bearbeiten für externen Zugriff:
+# Ingress Rules bearbeiten für externen Zugriff
 
 ➔ Oracle Instanz öffnen  
 ➔ Networking
