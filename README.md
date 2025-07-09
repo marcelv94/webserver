@@ -34,7 +34,8 @@ Nun sollte man sich mit der VM verbunden haben. Danach folgendes eingeben:
 - Eingabe für ngnix und php: 
 ```
 sudo su
-apt-update
+apt update
+apt upgrade
 apt install ufw
 apt install nginx
 apt install php‐fpm
