@@ -49,7 +49,7 @@ nano default
 ```
 location ~ \.php$ {
    include snippets/fastcgi‐php.conf;
-   fastcgi_pass unix:/run/php/php8.1‐fpm.sock;
+   fastcgi_pass unix:/run/php/php8.3‐fpm.sock;
 }
 ```
 - Die Zeile “fastcgi_pass ...” muss angepasst werden nach dem aktivieren. Mit "php -v" kann die php-Version ermittelt werden. "... with Zend OPcache v8.1.2ubuntu.2.21 ..." Sagt aus, dass es sich um die Version 8.1 handelt.
