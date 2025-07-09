@@ -38,7 +38,7 @@ apt update
 apt upgrade
 apt install ufw
 apt install nginx
-apt install php‐fpm
+apt install php8.3‐fpm
 cd /etc/nginx/sites‐available
 nano default
 ```
